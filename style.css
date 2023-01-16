@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* Font */
+    --ff: 'Red Hat Display', sans-serif;
+    --fw-light: 500;
+    --fw-normal: 700;
+    --fw-bold: 900;
+
+    /* Colors */
+    --white: hsl(0, 100%, 100%);
+    --black: hsl(0, 0%, 0%);
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+
+
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--ff);
+    background: var(--pale-blue);
+    font-size: 16px;
+}
+
+main {
+    background-image: url(images/pattern-background-desktop.svg);
+    background-position: center top;
+    background-repeat: repeat-x;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 97vh;
+}
+
+.component {
+    background: var(--white);
+    width: 450px;
+    border: none;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.img-hero {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.sub {
+    margin: 30px 50px;
+}
+
+.title, .sub-type, .btn-box {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sub .title {
+    text-align: center;
+}
+
+.title h1 {
+    color: var(--dark-blue);
+    font-weight: var(--fw-bold);
+    font-size: 28px;
+    margin-top: 40px;
+}
+
+.title p {
+    color: var(--desaturated-blue);
+    font-weight: var(--fw-light);
+    line-height: 25px;
+    margin-top: 20px;
+}
+
+.sub .sub-type {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    background: var(--very-pale-blue);
+    border: none;
+    border-radius: 10px;
+
+    padding: 22px;
+}
+
+.left {
+    display: flex;
+    flex-direction: row;
+}
+
+.left img {
+    margin-right: 20px;
+}
+
+.price h3 {
+    color: var(--dark-blue);
+    font-weight: var(--fw-bold);
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.price p {
+    color: var(--desaturated-blue);
+    font-weight: var(--fw-light);
+}
+
+.sub-type span {
+    color: var(--bright-blue);
+    font-weight: var(--fw-bold);
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+
+.btn-box {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.btn-box button {
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.pr-btn {
+    box-shadow: 5px 15px 18px 6px rgba(0, 0, 0, 0.1);
+    color: var(--very-pale-blue);
+    font-weight: var(--fw-normal);
+    background: var(--bright-blue);
+}
+
+.sc-btn {
+    margin: 0;
+    color: var(--desaturated-blue);
+    font-weight: var(--fw-normal);
+    background: none;
+}
+
+/* Hover */
+.sub-type span:hover {
+    color: rgb(133, 128, 212);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.pr-btn:hover {
+    background: rgb(118, 108, 241);
+    cursor: pointer;
+}
+
+.sc-btn:hover {
+    color: rgb(42, 50, 71);
+    cursor: pointer;
+}
+
+/* Responsive background */
+
+@media all and (max-width: 500px) {
+    main {
+        background-image: url("images/pattern-background-mobile.svg");
+    }
+
+    .component {
+        width: 350px;
+    }
+
+    .sub {
+        margin: 20px 15px;
+}
+}
